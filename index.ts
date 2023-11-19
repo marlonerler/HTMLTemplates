@@ -26,10 +26,10 @@ export function template(configuration: TemplateCfg): string {
 				charset +
 				viewport +
 				title(configuration.title ?? 'Untitled') +
-				configuration.head ?? '' +
+				(configuration.head ?? '') +
 			'</head>' +
 			'<body>' + 
-				configuration.body ?? '' +
+				(configuration.body ?? '') +
 			'</body>' +
 		'</html>'
 }
