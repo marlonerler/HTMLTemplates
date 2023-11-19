@@ -21,15 +21,15 @@ export interface TemplateCfg {
 export function template(configuration: TemplateCfg): string {
 	return '' +
 		doctype + '\n' +
-		`<html lang="${configuration.language ?? 'en'}">` +
+		`<html lang="${configuration.language || 'en'}">` +
 			'<head>' +
 				charset +
 				viewport +
 				title(configuration.title ?? 'Untitled') +
-				(configuration.head ?? '') +
+				(configuration.head || '') +
 			'</head>' +
 			'<body>' + 
-				(configuration.body ?? '') +
+				(configuration.body || '') +
 			'</body>' +
 		'</html>'
 }
